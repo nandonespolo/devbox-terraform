@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  devbox:
+    build:
+      context: .
+    image: myimage:v1
+    container_name: devbox
+    volumes:
+       - ./src:/workdir/
+       - ~/.aws/:/root/.aws/
