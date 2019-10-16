@@ -12,7 +12,6 @@ pipeline {
         stage('Start') {
             steps {
                 echo 'Starting the container'
-                sh 'sudo docker rm -f devbox > /dev/null 2>&1'
                 sh 'sudo make start'
             }
         }
