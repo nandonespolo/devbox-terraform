@@ -18,6 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'sudo docker rm -f devbox > /dev/null 2>&1'
                 sh 'sudo make apply'
             }
         }
